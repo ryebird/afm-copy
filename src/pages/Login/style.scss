@@ -1,0 +1,51 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Смещаем форму влево */
+  height: 100vh;
+  position: relative;
+}
+
+.login-page.dark {
+  color: #ffffff;
+}
+
+/* Размещение Vanta.js */
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%; /* Смещаем эффект HALO правее */
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Форма */
+.login-form-container {
+  color: #000;
+  max-width: 450px;
+  width: 40%;
+  padding: 40px;
+  margin-left: 5%; /* Больше сдвигаем влево */
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.login-page.dark .login-form-container {
+  background-color: #333333;
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.login-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

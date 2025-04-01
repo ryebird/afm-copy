@@ -1,0 +1,166 @@
+.chatgpt {
+  flex: 1;
+  border-radius: 10px;
+  background-color: #121f2b;
+  border: 1px solid #375772;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: flex 0.5s ease, max-height 0.5s ease;
+  margin-bottom: 5px;
+
+  &.expanded {
+    flex: 2;
+    max-height: 70vh;
+  }
+
+  &.collapsed {
+    flex: 0.18;
+    max-height: 30vh;
+  }
+
+  .chat-header {
+    background-color: #09131c;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+    h2 {
+      color: #e0e0e0;
+      margin: 0;
+    }
+
+    .toggle-icon {
+      font-size: 20px;
+      color: #9c9c9c;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .chat-container {
+    background-color: #121f2b;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 210px;
+    transition: max-height 0.3s ease;
+
+    &.collapsed {
+      display: none; /* Скрываем переписку в маленькой версии */
+    }
+  }
+
+  .chat-message {
+    max-width: 70%;
+    padding: 3px 3px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.4;
+    display: inline-block;
+    .message-text {
+      padding: 3px;
+      margin: 0;
+    }
+  }
+
+  .user-message {
+    align-self: flex-end;
+    background-color: #4d7ba1;
+    color: white;
+    text-align: right;
+    border-bottom-right-radius: 0;
+  }
+
+  .bot-message {
+    align-self: flex-start;
+    background-color: #375772;
+    color: white;
+    text-align: left;
+    border-bottom-left-radius: 0;
+  }
+
+  .chat-input {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+    padding: 10px;
+
+    input {
+      flex-grow: 1;
+      padding: 12px 15px;
+      padding-left: 35px;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      background-color: #121f2b;
+      color: #e0e0e0;
+      font-size: 14px;
+
+      &:focus {
+        border-color: #4d7ba1;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      font-size: 20px;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .icon {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #4d7ba1;
+      font-size: 30px;
+    }
+  }
+  .details-btn {
+    background: none;
+    border: none;
+    color: inherit; /* Цвет текста наследуется от родительского элемента */
+    text-decoration: underline; /* Подчеркивание текста */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    padding: 0; /* Убираем внутренние отступы */
+    font-size: inherit; /* Наследуем размер шрифта */
+    
+    &:hover {
+      text-decoration: underline;
+      color: #007bff; /* Меняем цвет на синий при наведении */
+    }
+  
+    &:focus {
+      outline: none; /* Убираем стандартный обвод вокруг кнопки при фокусе */
+    }
+  }
+  
+}

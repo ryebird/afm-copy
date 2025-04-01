@@ -1,0 +1,15 @@
+{
+    "login": {
+      "welcome": "С возвращением!",
+      "description": "Введите ваши данные для входа в аккаунт.",
+      "email": "ИИН",
+      "emailPlaceholder": "Введите вашу почту",
+      "password": "Пароль",
+      "passwordPlaceholder": "Введите ваш пароль",
+      "submit": "Войти",
+      "clear": "Очистить",
+      "forgotPassword": "Забыли пароль?",
+      "success": "Вы успешно вошли в систему!"
+    }
+  }
+ 
